@@ -1,5 +1,5 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from "react";
-import {IconButton, TextField} from "@material-ui/core";
+import {Button, IconButton, TextField} from "@material-ui/core";
 import {AddBox} from "@material-ui/icons";
 
 type AddItemFromPropsType = {
@@ -23,7 +23,7 @@ export function AddItemForm(props: AddItemFromPropsType) {
     }
 
     const addItem = () => {
-        if (title.trim() !== "") {
+        if (title.trim() != "") {
             props.addItem(title);
             setTitle("");
         } else {
